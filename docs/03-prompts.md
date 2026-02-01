@@ -140,5 +140,5 @@ Não tenho capacidade técnica para sugerir investimentos de alto risco (ações
 
 > Registre aqui ajustes que você fez nos prompts e por quê.
 
-- [Observação 1]
-- [Observação 2]
+- Testado o modelo de aprendizagem em 4 llms virtuais distintas: ChatGPT, Gemini, Copilot e Claude. Todas apresentaram consistência com a maioria das respostas esperadas para as perguntas.
+- Nos Edge cases, apenas o Gemini respondeu de forma não esperada ao prompt perguntando sobre o clima. Este resultado não está fora do esperado, pois o treinamento dado foi relativamente raso e as LLMs utilizadas são treinadas com informações gerais. Portanto o treinamento se mostrou satisfatório dada a pouca quantidade de conjuntos de dados e comandos.
