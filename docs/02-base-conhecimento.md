@@ -49,9 +49,58 @@ with open('data/produtos_financeiros.json', 'r', encoding='utf-8') as f:
 ```
 
 ### Como os dados são usados no prompt?
-> Os dados vão no system prompt? São consultados dinamicamente?
+
+Exemplo de injeção de dados:
+
+```text
+PERFIL DO CLIENTE (data/perfil_investidor.json):
+{
+  "nome": "Aldair Sobrenome",
+  "idade": 28,
+  "profissao": "Engenheiro Agrônomo",
+  "renda_mensal": 7000.00,
+  "perfil_investidor": "moderado",
+  "objetivo_principal": "Construir reserva de emergência",
+  "patrimonio_total": 30000.00,
+  "reserva_emergencia_atual": 12000.00,
+  "aceita_risco": false,
+  "metas": [
+    {
+      "meta": "Completar reserva de emergência",
+      "valor_necessario": 20000.00,
+      "prazo": "2026-06"
+    },
+    {
+      "meta": "Entrada do apartamento",
+      "valor_necessario": 62000.00,
+      "prazo": "2028-12"
+    }
+  ]
+}
+
+HISTÓRICO DE TRANSAÇÕES (data/transacoes.csv):
+data,descricao,categoria,valor,tipo
+2025-10-01,Salário,receita,7000.00,entrada
+2025-10-02,Aluguel,moradia,1500.00,saida
+2025-10-03,Supermercado,alimentacao,620.00,saida
+2025-10-05,Netflix,lazer,55.90,saida
+2025-10-07,Farmácia,saude,89.00,saida
+2025-10-10,Restaurante,alimentacao,120.00,saida
+2025-10-12,Uber,transporte,45.00,saida
+2025-10-15,Conta de Luz,moradia,180.00,saida
+2025-10-20,Academia,saude,99.00,saida
+2025-10-25,Combustível,transporte,250.00,saida
 
 
+HISTÓRICO DE ATENDIMENTOS (data/historico_atendimento.csv):
+data,canal,tema,resumo,resolvido
+2025-09-15,chat,CDB,Cliente perguntou sobre rentabilidade e prazos,sim
+2025-09-22,telefone,Problema no app,Erro ao visualizar extrato foi corrigido,sim
+2025-10-01,chat,Tesouro Selic,Cliente pediu explicação sobre o funcionamento do Tesouro Direto,sim
+2025-10-12,chat,Metas financeiras,Cliente acompanhou o progresso da reserva de emergência,sim
+2025-10-25,email,Atualização cadastral,Cliente atualizou e-mail e telefone,sim
+
+```
 
 ---
 
