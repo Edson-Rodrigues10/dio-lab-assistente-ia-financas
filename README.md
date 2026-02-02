@@ -1,149 +1,101 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+Marqs - Assistente e Educador Financeiro 🤖💰
+Um agente financeiro inteligente desenvolvido com IA Generativa para ensinar conceitos básicos de finanças e orientar sobre investimentos de baixo risco.
+🎯 O Problema
+A maioria dos adultos não possui conhecimento mínimo para organizar sua vida financeira, resultando em dificuldades para alcançar objetivos e acúmulo de dívidas.
+💡 A Solução
+Marqs é um educador financeiro que:
 
-## Contexto
+Ensina conceitos financeiros de forma didática e acessível
+Analisa o perfil e histórico financeiro do usuário
+Sugere investimentos de baixo risco personalizados
+Explica produtos financeiros disponíveis
+Ajuda a administrar finanças pessoais
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+🚀 Tecnologias
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+LLM: Ollama (Gemma2:9b)
+Interface: Streamlit
+Linguagem: Python
+Dados: CSV e JSON
 
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
-
----
-
-## O Que Você Deve Entregar
-
-### 1. Documentação do Agente
-
-Defina **o que** seu agente faz e **como** ele funciona:
-
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
-
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
-
----
-
-### 2. Base de Conhecimento
-
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
-
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
-
----
-
-### 3. Prompts do Agente
-
-Documente os prompts que definem o comportamento do seu agente:
-
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
-
----
-
-### 4. Aplicação Funcional
-
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
-
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
-## Estrutura do Repositório
-
-```
+📁 Estrutura do Projeto
 📁 lab-agente-financeiro/
+├── 📁 data/                          # Dados mockados do cliente
+│   ├── perfil_investidor.json        # Perfil e metas
+│   ├── transacoes.csv                # Histórico de gastos
+│   ├── historico_atendimento.csv     # Atendimentos anteriores
+│   └── produtos_financeiros.json     # Produtos disponíveis
 │
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
+├── 📁 docs/                          # Documentação completa
 │   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
 │   ├── 02-base-conhecimento.md       # Estratégia de dados
 │   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
+│   ├── 04-metricas.md                # Avaliação e resultados
+│   └── 05-pitch.md                   # Apresentação do projeto
 │
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
-```
+└── 📁 src/                           # Código da aplicação
+    ├── app.py                        # Aplicação Streamlit
+    └── README.md                     # Instruções de execução
+⚙️ Como Executar
+1. Instalar o Ollama
+bash# Baixe em: https://ollama.com
+# Baixe o modelo:
+ollama pull gemma2:9b
+2. Instalar dependências
+bashpip install streamlit pandas requests
+3. Verificar o Ollama
+bashollama serve
+4. Executar a aplicação
+bashstreamlit run src/app.py
+🎭 Características do Marqs
+Personalidade:
 
----
+Educativo e consultivo
+Formal e acessível
+Didático e paciente
 
-## Dicas Finais
+Capacidades:
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+✅ Explica conceitos financeiros básicos
+✅ Analisa gastos do usuário
+✅ Sugere investimentos de baixo risco
+✅ Contextualiza com base no perfil do cliente
+❌ Não sugere investimentos em ações
+❌ Não acessa dados sensíveis
+
+📊 Produtos Financeiros Cobertos
+
+Tesouro Selic, Prefixado e IPCA+
+CDB Liquidez Diária
+LCI/LCA
+Poupança
+Fundos Multimercado
+Fundos Imobiliários (FIIs)
+Fundos de Ações (apenas explicação)
+
+🔒 Segurança
+
+Respostas baseadas apenas nos dados fornecidos
+Não inventa informações financeiras
+Admite quando não sabe algo
+Não compartilha dados de outros clientes
+
+📈 Resultados
+O agente demonstrou assertividade nas respostas esperadas durante os testes, respondendo corretamente a:
+
+Consultas sobre conceitos financeiros
+Análise de gastos pessoais
+Recomendações personalizadas
+Perguntas fora do escopo (recusa adequada)
+
+🎯 Próximos Passos
+
+ Melhorar a linguagem para ser mais descontraída
+ Otimizar tempo de resposta
+ Integrar com API de LLM mais robusta
+ Expandir base de conhecimento
+
+📝 Documentação Completa
+Toda a documentação detalhada está disponível na pasta docs/, incluindo arquitetura, estratégias de prompt, métricas e pitch.
+
+Desenvolvido como parte do desafio de IA Generativa da DIO
