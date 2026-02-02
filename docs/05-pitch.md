@@ -6,14 +6,13 @@
 ## Roteiro Sugerido
 
 ### 1. O Problema (30 seg)
-> Qual dor do cliente você resolve?
 
-[Sua descrição aqui]
+  Atualmente, a maioria das pessoas da vida adulta não tem o conhecimento mínimo necessário para organizar sua vida financeira. Isso gera muitos problemas na vida de um cidadão por não conseguir alcançar seus objetivos e, também, se afundarem em dívidas impagáveis. 
+
 
 ### 2. A Solução (1 min)
-> Como seu agente resolve esse problema?
 
-[Sua descrição aqui]
+O Marqs, agente e educador financeiro, ajuda o usuário a administrar suas próprias finanças, ensina e descreve todos os assuntos relevantes do mundo financeiro e, também, indica os melhores investimentos de fundos de risco baixo.
 
 ### 3. Demonstração (1 min)
 > Mostre o agente funcionando (pode ser gravação de tela)
@@ -21,9 +20,8 @@
 [Descreva o que será mostrado]
 
 ### 4. Diferencial e Impacto (30 seg)
-> Por que essa solução é inovadora e qual é o impacto dela na sociedade?
 
-[Sua descrição aqui]
+Este trabalho serve como um ótimo guia inicial para os iniciantes na administração das próprias finanças. Ele sugere atitudes que o usuário pode tomar para melhorar suas finanças, ensina os principais temas, explica os tipos de investimentos e guia sobre os investimentos de baixo risco que mais combinam com o usuário.
 
 ---
 
