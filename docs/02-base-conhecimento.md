@@ -48,6 +48,18 @@ with open('data/produtos_financeiros.json', 'r', encoding='utf-8') as f:
   produtos = json.load(f)
 ```
 
+ou dessa forma:
+
+```python
+import pandas as pd
+import json
+
+perfil = json.load(open('./data/perfil_investidor.json'))
+historico = pd.read_csv('./data/historico_atendimento.csv')
+produtos = json.load(open('./data/produtos_financeiros.json'))
+transacoes = pd.read_csv('./data/transacoes.csv')
+```
+
 ### Como os dados são usados no prompt?
 
 Exemplo de injeção de dados:
